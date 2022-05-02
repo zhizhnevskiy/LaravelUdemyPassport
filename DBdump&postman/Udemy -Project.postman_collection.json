@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "ea2074dc-5659-4171-aa7d-1c5bc88d8e58",
+		"name": "Udemy -Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"zhizhnevskaya@gmail.com\",\n    \"password\": 123\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Nadya\",\n    \"email\": \"zhizhnevskaya@gmail.com\",\n    \"password\": 12345,\n    \"password_confirmation\": 12345\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/forgotPassword",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"zhizhnevskaya@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/forgotPassword",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"forgotPassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/resetPassword",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"token\": \"92023\",\n    \"email\": \"zhizhnevskaya@gmail.com\",\n    \"password\": \"123\",\n    \"password_confirmation\": \"123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/resetPassword",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"resetPassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDA0ODNlNjg1OGUxMjY0MWE0ODc0ODYwMGIzNDRlOTc2OTRiZjQ4NDBlOTFjOTU0YjczMzc2YzFjNDQ2NTNhNWIyM2RkZTJmNGYwNzk5N2QiLCJpYXQiOjE2NTE0NzI4NDYuMTU2MzUxLCJuYmYiOjE2NTE0NzI4NDYuMTU2MzYsImV4cCI6MTY4MzAwODg0Ni4xNDgwNjMsInN1YiI6IjciLCJzY29wZXMiOltdfQ.ThUxYLfokcC7QaHtwpum5sIyFKbvKmALwh9TqrKDu43xAHMXMm1DJv2KWpGCtD7r6c0x1YAoatHj244B1NVjf5LghOrZ_DDeES0YJQw82nr4EFH26nxc1l-mlT-XlY9UxVwTEVxshJSOK-eWENJi4vpBm329RyyiGT2cXedIiL2dyFYOjUDCNR2v-ywNBKJ5v6xHQ7VhQ8RY1Ig6FxjvmnWv3l358XBgOG_UTI_l6iHwNN26QrBlJfTpt5EegseiWBLSIZNDFu8hpkFoCtP_iMVG7Nx0LmP7MgMMK7fEqS65AT0CjnHGLzIOha-8QNDpXlkakNisP9GsmDBoqf16UIvUMtBvqNjsTEd_Pw2tFgxbXebBgVuJc_reR5lxrFDazKBouhM3JxPuMExOLJqn9FuP5xVHg9funXLPZUjdqynrAVYF0dB7UBpxUrLnoKh7S3cy7CtC3cB1ajQWugRUMTSFfiEUvmMxDw2KXYx16NHNazFRJSBaekk0GcVJsprCj9XObuP4tRTIbMWnJPZYe18kCZei4_09SG4eKVZ4hjAGOL2POmIsEcFiE7iwvvtGzT0Hnz2JLPZCa_iMxMyvZmsHbr8HZx9XWKVm6_UG2dRn2DO0dNiThjz_DlUoOoOVBt8Nwwgm6T8BQyDCsBSFevDlnDiYHaWGTCWeKcv6kUE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

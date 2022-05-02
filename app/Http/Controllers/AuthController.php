@@ -10,7 +10,6 @@ use Illuminate\Support\Facades\Hash;
 use App\Http\Requests\RegisterRequest;
 use Illuminate\Support\Facades\Validator;
 
-
 class AuthController extends Controller
 {
     public function Login(Request $request)
