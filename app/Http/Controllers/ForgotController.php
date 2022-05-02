@@ -51,7 +51,7 @@ class ForgotController extends Controller
                     'email' => $email,
                     'token' => $token
                 ]);
-            // generate random token
+            // Send Email
             Mail::to($email)->send(new ForgotMail($token));
             return response([
                 'message' => "Reset Password Mail send on your email"

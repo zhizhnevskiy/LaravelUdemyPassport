@@ -54,7 +54,6 @@ class AuthController extends Controller
             ], 400);
         }
 //////////////////////// Register user
-
         try {
             $user = User::create([
                 'name' => $request->name,
