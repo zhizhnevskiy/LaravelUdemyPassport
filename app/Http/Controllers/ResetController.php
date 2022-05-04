@@ -62,6 +62,6 @@ class ResetController extends Controller
 
         return response([
             'message' => "Password changed successfully",
-        ], 400);
+        ], 200);
     }
 }
