@@ -39,7 +39,7 @@ class AuthController extends Controller
     {
 //////////////////////// Rules for Validate request
         $rules =[
-            'name' => 'required|max:50',
+            'name' => 'required|max:50|min:3',
             'email' => 'required|unique:users|min:5|max:50',
             'password' => 'required|min:5|confirmed'
         ];
@@ -50,7 +50,7 @@ class AuthController extends Controller
                 'result'        => 0,
                 'message'       => $validator->errors(),
                 'date_time'     => date('Y-m-d H:i'),
-            ], 400);
+            ], 401);
         }
 //////////////////////// Register user
         try {
@@ -62,6 +62,7 @@ class AuthController extends Controller
             $token = $user->createToken('app')->accessToken;
 
             return response([
+                'result' => 1,
                 'message' => "User Registered successfully",
                 'user' => $user,
                 'token' => $token

@@ -33,7 +33,6 @@ class ForgotController extends Controller
             ], 400);
         }
 //////////////////////// Forgot password
-
         $email = $request->email;
 
         if (User::where('email', '=', $email)->doesntExist()) {
@@ -46,6 +45,10 @@ class ForgotController extends Controller
         $token = rand(10, 100000);
 
         try {
+            DB::table('password_resets')
+                ->where('email', '=', $email)
+                ->delete();
+
             DB::table('password_resets')
                 ->insert([
                     'email' => $email,
